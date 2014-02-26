@@ -1,4 +1,20 @@
-== README
+README
+======
+
+
+Sources
+-------
+
+The initial Ajax implementation for the Post model was implemeted from following this tutorial:
+* http://code.tutsplus.com/tutorials/using-unobtrusive-javascript-and-ajax-with-rails-3--net-15243
+
+### NOTE:
+The fade out on destroy in the posts index is not working.
+
+
+
+Boilerplate (Auto generated README.rdoc)
+----------------------------------------
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
