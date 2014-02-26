@@ -1,0 +1,4 @@
+$('body').html("
+%h1 = escape_javascript(@post.title)
+").append("#{escape_javascript(@post.content)}");
+
