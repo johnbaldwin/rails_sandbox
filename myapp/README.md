@@ -5,11 +5,12 @@ README
 Sources
 -------
 
-The initial Ajax implementation for the Post model was implemeted from following this tutorial:
+The initial Ajax implementation for the Post model started from following this tutorial:
 * http://code.tutsplus.com/tutorials/using-unobtrusive-javascript-and-ajax-with-rails-3--net-15243
 
-### NOTE:
-The fade out on destroy in the posts index is not working.
+### NOTES:
+
+
 
 
 

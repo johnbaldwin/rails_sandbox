@@ -1,4 +1,7 @@
-$('.delete_post').bind('ajax:success', function() {
+$(document).ready(function() {
+    $('.delete_post').bind('ajax:success', function() {
         $(this).closest('tr').fadeOut();
+    });
+
 });
 
