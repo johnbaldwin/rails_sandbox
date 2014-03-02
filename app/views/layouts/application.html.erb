@@ -8,6 +8,35 @@
   <% yield :head %>
 </head>
 <body>
+
+<%#
+Ways of showing the active link in the navbar
+https://www.ruby-toolbox.com/categories/rails_menu_builders.html
+
+http://stackoverflow.com/questions/9879169/how-to-get-twitter-bootstrap-navigation-to-show-active-link
+
+http://stackoverflow.com/questions/10126014/rails-highlight-current-menu-nave-in-page
+
+use link_to_unless_current
+
+li { color:#fff; } /* selected */
+li a { color:#333; }
+li a:hover { color:#999; }
+
+<ul id="navbar">
+  <li>Home</li>
+  <li><a href="/controller/about">About Us</a></li>
+</ul>
+
+TODO:
+create partial for the navbar
+add render  nav
+
+    see:  http://ruby.railstutorial.org/book/ruby-on-rails-tutorial
+
+%>
+
+
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -18,13 +47,19 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      <%#
       <a class="navbar-brand" href="/">Sandbox42</a>
+          %>
+      <%= link_to 'Sandbox42', root_path, class: 'navbar-brand' %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <%# following consider moving to shared/_nav partial %>
+
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/posts">Posts</a></li>
+        <li><%= link_to "Posts", posts_path %></li>
+
         <li><a href="#">Link</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
@@ -46,7 +81,7 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/about">About</a></li>
+        <li><%= link_to "About", about_path %></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
           <ul class="dropdown-menu">
