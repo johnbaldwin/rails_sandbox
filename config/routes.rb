@@ -1,5 +1,7 @@
 Myapp::Application.routes.draw do
 
+  resources :events
+
   get '/about', to: 'welcome#about', as: 'about'
 
   resources :posts
