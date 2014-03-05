@@ -37,6 +37,16 @@ gem 'haml-rails', group: :development
 
 gem 'html2haml'
 
+gem 'paperclip'
+
+#gem 'delayed_paperclip'
+#
+
+#gem 'sidekiq'
+gem 'resque'
+
+gem 'unicorn'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
