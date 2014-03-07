@@ -37,6 +37,8 @@ gem 'haml-rails', group: :development
 
 gem 'html2haml'
 
+gem 'foreman'
+
 gem 'paperclip'
 
 #gem 'delayed_paperclip'

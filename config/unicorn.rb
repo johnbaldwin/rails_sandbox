@@ -2,7 +2,14 @@
 # https://devcenter.heroku.com/articles/rails-unicorn
 # http://unicorn.bogomips.org/Unicorn/Configurator.html
 
-Rails.logger.info "Unicorn in #{Rails.env} mode"
+# This line seems to be required to keep from failing on referencing Rails
+require File.dirname(__FILE__)+'/application'
+
+# Remarking out Rails.logger here until I can figure out why it is not available
+# Error: undefined method `info' for nil:NilClass
+
+#Rails.logger.info "Unicorn in #{Rails.env} mode"
+
 
 if Rails.env == 'development'
     worker_processes = 1
@@ -25,8 +32,8 @@ before_fork do |server, worker|
 
     # If you are using Redis but not Resque, change this
     if defined?(Resque)
-        Resquew.redis.quit
-        Rails.logger.info('Disconnected from Redis')
+        Resque.redis.quit
+        #Rails.logger.info('Disconnected from Redis')
     end
 end
 
@@ -41,6 +48,7 @@ after_fork do |server, worker|
     # If you are using Redis but not Resque, change this
     if defined?(Resque)
         Resque.redis = ENV['REDIS_URI']
-        Rails.logger.info('Connected to Redis')
+        #Rails.logger.info('Connected to Redis')
+    end
 end
 
