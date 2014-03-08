@@ -1,29 +1,40 @@
-%h1 Listing events
+-# Reference links as I try out differnt ways to implement UI elements
+-# http://stackoverflow.com/questions/10764862/best-way-to-use-twitter-bootstrap-icons-as-links-in-ruby-on-rails-3
 
-%table
-  %tr
-    %th Title
-    %th Description
-    %th Location
-    %th Start time
-    %th End time
-    %th All day
-    %th
-    %th
-    %th
 
-  - @events.each do |event|
-    %tr
-      %td= event.title
-      %td= event.description
-      %td= event.location
-      %td= event.start_time
-      %td= event.end_time
-      %td= event.all_day
-      %td= link_to 'Show', event
-      %td= link_to 'Edit', edit_event_path(event)
-      %td= link_to 'Destroy', event, :method => :delete, :data => { :confirm => 'Are you sure?' }
+%h3{class: "h1_style1"} Events
+
+%div{class: "table-responsive"}
+  %table{class: "table table-striped"}
+    %thead
+      %tr
+        %th Title
+        %th Description
+        %th Location
+        %th Start time
+        %th End time
+        %th All day
+        %th
+        %th
+
+    %tbody
+      - @events.each do |event|
+        %tr
+          %td= link_to event.title, event
+          %td= event.description
+          %td= event.location
+          %td= event.start_time
+          %td= event.end_time
+          %td= event.all_day
+          %td
+            = link_to '', edit_event_path(event), class: 'glyphicon glyphicon-pencil'
+            -# These two delete actions produce identical output
+            -#= link_to "<span class='glyphicon glyphicon-remove'></span>".html_safe,
+            -#    event, method: :delete, data: { confirm: 'Are you sure?' }
+            = link_to event, method: :delete, confirm: 'Are you sure?'  do
+              %span:{class: 'glyphicon glyphicon-remove'}
 
 %br
 
-= link_to 'New Event', new_event_path
+  = link_to 'Create a new event', new_event_path
+
