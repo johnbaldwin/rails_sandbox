@@ -45,6 +45,7 @@ gem 'paperclip'
 #
 
 #gem 'sidekiq'
+gem 'redis'
 gem 'resque'
 
 gem 'unicorn'
