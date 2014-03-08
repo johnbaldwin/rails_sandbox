@@ -1,25 +1,28 @@
-%h1 Listing posts
+%h3 Listing posts
 
-%table
-  %tr
-    %th Name
-    %th Title
-    %th Content
-    %th
-    %th
-    %th
+%div{class: "table-responsive"}
+  %table{class: "table table-striped"}
+    %thead
+      %tr
+        %th Title
+        %th Content
+        %th Name
 
-  - @posts.each do |post|
-    %tr
-      %td= post.name
-      %td= post.title
-      %td= post.content
-      %td= link_to 'Show', post
-      %td= link_to 'Edit', edit_post_path(post)
+    %tbody
+      - @posts.each do |post|
+        %tr
+          %td= link_to post.title, post
+          %td= post.content
+          %td= post.name
+          %td
+            = link_to '', edit_post_path(post), class: 'glyphicon glyphicon-pencil'
+            -# These two delete actions produce identical output
+            -#= link_to "<span class='glyphicon glyphicon-remove'></span>".html_safe,
+            -#    event, method: :delete, data: { confirm: 'Are you sure?' }
+            = link_to post, method: :delete, confirm: 'Are you sure?'  do
+              %span:{class: 'glyphicon glyphicon-remove'}
 
-      %td= link_to 'Destroy', post, method: :delete, class: 'delete_post', remote: true, data: { confirm: 'Are you sure?' }
-      -# The following line is the original auto-generated line
-      -# %td= link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
 
 %br
 
