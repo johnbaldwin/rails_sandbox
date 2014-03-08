@@ -1,6 +1,9 @@
 #
 # https://devcenter.heroku.com/articles/rails-unicorn
 # http://unicorn.bogomips.org/Unicorn/Configurator.html
+#
+# Check out the pid manipulation here:
+# http://joshsymonds.com/blog/2012/02/27/setting-up-unicorn-in-a-production-environment/
 
 # This line seems to be required to keep from failing on referencing Rails
 require File.dirname(__FILE__)+'/application'
