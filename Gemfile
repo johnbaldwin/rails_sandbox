@@ -34,7 +34,17 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'haml'
 
-gem 'haml-rails', group: :development
+# To add to a group on a per gem basis:
+#gem 'haml-rails', group: :development
+
+group :development do
+    gem 'haml-rails'
+
+    # For debugging rails apps in the Chrome browser
+    # https://chrome.google.com/webstore/detail/railspanel/gjpfobpafnhjhbajcjgccbbdofdckggg
+    # https://github.com/dejan/rails_panel
+    gem 'meta_request'
+end
 
 gem 'html2haml'
 
