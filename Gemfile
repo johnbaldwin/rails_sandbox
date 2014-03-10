@@ -25,6 +25,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
@@ -49,6 +50,18 @@ gem 'redis'
 gem 'resque'
 
 gem 'unicorn'
+
+# https://github.com/tors/jquery-fileupload-rails
+gem 'jquery-fileupload-rails'
+
+#https://github.com/semaperepelitsa/jquery.fileupload-rails
+#gem 'jquery.fileupload-rails'
+
+
+# 'therubyracer' gem is referenced in the Gemfile of the following example:
+# https://github.com/5minpause/multiple-file-upload
+# https://github.com/cowboyd/therubyracer
+#gem 'therubyracer'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

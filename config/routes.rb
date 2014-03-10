@@ -1,10 +1,10 @@
 Myapp::Application.routes.draw do
 
   resources :events
+  resources :posts
+  resources :images
 
   get '/about', to: 'welcome#about', as: 'about'
-
-  resources :posts
 
   root to: "welcome#index"
 
