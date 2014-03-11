@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 jQuery ->
-  $('#image_uploaded_file').attr('name','image[uploaded_image]')
+  $('#image_uploaded_image').attr('name','image[uploaded_image]')
   $('#new_image').fileupload
     dataType: 'script'
     add: (e, data) ->

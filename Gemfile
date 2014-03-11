@@ -44,13 +44,16 @@ group :development do
     # https://chrome.google.com/webstore/detail/railspanel/gjpfobpafnhjhbajcjgccbbdofdckggg
     # https://github.com/dejan/rails_panel
     gem 'meta_request'
+
+    # For debugging with RubyMine
+    #gem 'ruby-debug-ide'
 end
 
 gem 'html2haml'
 
 gem 'foreman'
 
-gem 'paperclip'
+gem 'paperclip', '~> 4.1.1'
 
 #gem 'delayed_paperclip'
 #

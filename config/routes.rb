@@ -3,6 +3,7 @@ Myapp::Application.routes.draw do
   resources :events
   resources :posts
   resources :images
+  resources :uploads
 
   get '/about', to: 'welcome#about', as: 'about'
 
