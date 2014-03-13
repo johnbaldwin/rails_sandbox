@@ -8,7 +8,6 @@
     - yield :head
   %body
 
-
     %nav{class: 'navbar navbar-default', role: "navigation"}
       .container-fluid
         / Brand and toggle get grouped for better mobile display
@@ -24,6 +23,8 @@
           %ul.nav.navbar-nav
             %li= link_to "Posts", posts_path
             %li= link_to "Events", events_path
+            %li= link_to "Uploads", uploads_path
+            %li= link_to "Images", images_path
             %li
               %a{:href => "#"} Link
             %li.dropdown
@@ -65,5 +66,5 @@
                   %a{:href => "#"} Separated link
       / /.navbar-collapse
       / /.container-fluid
-      .main-page-content
-        = yield
+    .main-page-content
+      = yield
