@@ -64,6 +64,8 @@ gem 'resque'
 
 gem 'unicorn'
 
+gem 'devise'
+
 # https://github.com/tors/jquery-fileupload-rails
 gem 'jquery-fileupload-rails'
 
@@ -93,4 +95,6 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Use for Heroku
 gem 'rails_12factor', group: :production
+
