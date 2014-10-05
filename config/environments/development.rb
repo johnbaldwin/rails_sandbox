@@ -27,4 +27,10 @@ Myapp::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+  # See Devise manual setup steps
+  config.action_mailer.default_url_options = { :host => 'localhost:5000' }
+
+  # only needed if ImageMagick's convert and identify are not in the PATH
+  #Paperclip.options[:command_path] = "/usr/local/bin/"
+
 end

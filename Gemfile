@@ -67,6 +67,8 @@ gem 'resque'
 
 gem 'unicorn'
 
+gem 'devise'
+
 # https://github.com/tors/jquery-fileupload-rails
 gem 'jquery-fileupload-rails'
 
@@ -98,4 +100,6 @@ end
 
 gem 'keyp'
 
+# Use for Heroku
 gem 'rails_12factor', group: :production
+
