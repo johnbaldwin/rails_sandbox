@@ -1,17 +1,18 @@
 source 'https://rubygems.org'
-ruby '2.1.0'
+
+#ruby '2.1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.3'
+gem 'rails', '4.1.0'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 4.0.3'
 
 # Use Twitter Bootstrap
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', git: 'https://github.com/twbs/bootstrap-sass'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -30,9 +31,11 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder', '~> 2.0'
 
 gem 'haml'
+
+gem 'cocaine'
 
 # To add to a group on a per gem basis:
 #gem 'haml-rails', group: :development
@@ -53,7 +56,7 @@ gem 'html2haml'
 
 gem 'foreman'
 
-gem 'paperclip', '~> 4.1.1'
+gem 'paperclip'
 
 #gem 'delayed_paperclip'
 #
@@ -92,5 +95,7 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'keyp'
 
 gem 'rails_12factor', group: :production

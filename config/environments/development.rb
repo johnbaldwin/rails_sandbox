@@ -27,6 +27,4 @@ Myapp::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  Paperclip.options[:command_path] = "/opt/local/bin/"
-
 end
